@@ -2,3 +2,4 @@ scripts:
   server: uvicorn src.main:app --reload
   install: venv/bin/python3 -m pip install -r requirements.txt
   build-docker-image: docker build -t my-fastapi-template-app .  
+  docker-shell: docker run --rm -it my-fastapi-template-app sh

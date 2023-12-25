@@ -25,17 +25,17 @@ This will create a folder called `venv` containing your virtual environment.
 #### Running the application 
 
 *  Running with uvicorn
-    ```
+    ```bash
     uvicorn src.main:app --reload
     ```
 Alternatively, in order to skip writting whole command you can use `rav` CLI to run scripts defined in `rav.yaml`
 
 * Install rav CLI globally using command:
-    ```
+    ```bash
     pip install rav
     ```
 * Now using rav CLI run script `runserver` from rav.yaml:
-    ```
+    ```bash
     rav run server
     ```
 
@@ -43,10 +43,7 @@ Alternatively, in order to skip writting whole command you can use `rav` CLI to 
 
 You can customize the scripts defined in rav.yaml
 
-* In the script `build-docker-image` shown below, you can replace my-fastapi-template-app with the name of your applcation.
-    ```
-    docker build -t my-fastapi-template-app . 
-    ```
+* In the scripts you can replace `my-fastapi-template-app` with the name of your application.
 
 ### Features of this template
 
