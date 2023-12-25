@@ -1,0 +1,3 @@
+scripts:
+  runserver: uvicorn src.main:app --reload
+  install: venv/bin/python3 -m pip install -r requirements.txt
