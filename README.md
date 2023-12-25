@@ -31,16 +31,27 @@ This will create a folder called `venv` containing your virtual environment.
 Alternatively, in order to skip writting whole command you can use `rav` CLI to run scripts defined in `rav.yaml`
 
 * Install rav CLI globally using command:
-```
-pip install rav
-```
+    ```
+    pip install rav
+    ```
 * Now using rav CLI run script `runserver` from rav.yaml:
-```
-rav run runserver
-```
+    ```
+    rav run server
+    ```
+
+#### Customizing the rav scripts
+
+You can customize the scripts defined in rav.yaml
+
+* In the script `build-docker-image` shown below, you can replace my-fastapi-template-app with the name of your applcation.
+    ```
+    docker build -t my-fastapi-template-app . 
+    ```
 
 ### Features of this template
 
 * Hot reloading application in development with uvicorn. 
 * Support for running application inside docker container.
 * Support for running unit tests with pytest.
+* Automate running scripts with rav CLI.
+
