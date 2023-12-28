@@ -1,6 +1,7 @@
 scripts:
-  server: uvicorn src.main:app --reload
-  install: pip install -r requirements.txt
+  server: venv/bin/python -m uvicorn src.main:app --reload
+  init-venv: python -m venv venv
+  install: venv/bin/python -m pip install -r requirements.txt
   build-docker-image: docker build -t my-fastapi-template-app .  
   docker-shell: docker run --rm -it my-fastapi-template-app sh
-  tests: pytest
+  tests: venv/bin/python -m pytest
